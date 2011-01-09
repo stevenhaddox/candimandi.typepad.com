@@ -1,0 +1,28 @@
+body {
+  background: transparent url('../images/bg.jpg') no-repeat;
+}
+.container {
+  padding-left: 343px; /* off-set 130px to 126px for left-body content */
+}
+
+/* empty spacing to link back to the root of the blog,
+   this is located visually at the top of the blog as part of the bg */
+header { 
+  margin-top: 80px;
+}
+h1#banner { 
+  padding-top: 0 !important; 
+}
+a#header_link div {
+  height: 100px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+aside#ads {
+  margin-top: 162px;
+}
+aside#ads a#sponsor_info div {
+  height: 24px;
+  width: 100%;
+}
