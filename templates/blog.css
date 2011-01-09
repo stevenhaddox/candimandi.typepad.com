@@ -1,8 +1,8 @@
 body {
-  background: transparent url('../images/bg.jpg') no-repeat;
+  background: transparent url('../images/bg.jpg') top left no-repeat;
 }
 .container {
-  padding-left: 343px; /* off-set 130px to 126px for left-body content */
+  margin-left: 440px;
 }
 
 /* empty spacing to link back to the root of the blog,
@@ -14,9 +14,22 @@ h1#banner {
   padding-top: 0 !important; 
 }
 a#header_link div {
-  height: 100px;
+  height: 95px;
   width: 100%;
   margin: 0 auto;
+}
+
+aside#categories div#about {
+  background: transparent url('../images/bg_about.png') no-repeat;
+  height: 540px;
+}
+aside#categories div#features {
+  background: transparent url('../images/bg_features.png') no-repeat;
+  height: 394px;
+}
+aside#categories div#categories {
+  background: transparent url('../images/bg_categories.png') no-repeat;
+  height: 826px;  
 }
 
 aside#ads {
