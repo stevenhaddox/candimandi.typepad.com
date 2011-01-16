@@ -19,18 +19,38 @@ a#header_link div {
   margin: 0 auto;
 }
 
-aside#categories div#about {
+
+/* ========================= */
+/* = Features & Categories = */
+/* ========================= */
+
+aside#features div#about {
   background: transparent url('../images/bg_about.png') no-repeat;
   height: 540px;
 }
-aside#categories div#features {
+aside#features div#weekly {
   background: transparent url('../images/bg_features.png') no-repeat;
+  padding-top: 90px;
   height: 394px;
 }
-aside#categories div#categories {
+aside#features div#weekly div.feature {
+  margin-bottom: 10px;
+  text-align: center;
+}
+aside#features div#categories {
   background: transparent url('../images/bg_categories.png') no-repeat;
+  padding-top: 70px;
   height: 826px;  
 }
+aside#features div#categories div.category {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+
+/* ================== */
+/* = Ads & Sponsors = */
+/* ================== */
 
 aside#ads {
   margin-top: 162px;
@@ -38,4 +58,13 @@ aside#ads {
 aside#ads a#sponsor_info div {
   height: 24px;
   width: 100%;
+  margin-bottom: 10px;
 }
+aside#ads .w250x200, aside#ads .w250, aside#ads .w120 {
+  margin-bottom: 10px;
+  height: 120px;
+}
+aside#ads .w250x200 {
+  height: 200px;
+}
+
