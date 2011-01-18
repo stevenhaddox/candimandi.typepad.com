@@ -56,6 +56,12 @@ aside#features div#about {
   background: transparent url('../images/bg_about.png') no-repeat;
   height: 540px;
 }
+aside#features div#about div#about_me {
+  padding-top: 10px;
+}
+aside#features div#about div.item {
+  margin-bottom: 15px;
+}
 aside#features div#weekly {
   background: transparent url('../images/bg_features.png') no-repeat;
   padding-top: 90px;
@@ -68,7 +74,7 @@ aside#features div#weekly div.feature {
 aside#features div#categories {
   background: transparent url('../images/bg_categories.png') no-repeat;
   padding-top: 70px;
-  height: 826px;  
+  height: 826px;
 }
 aside#features div#categories div.category {
   margin-bottom: 10px;
@@ -83,6 +89,7 @@ aside#features div#categories div.category {
 aside#ads {
   margin-top: 162px;
 }
+aside#ads h4 { margin-bottom: 5px; }
 aside#ads a#sponsor_info div {
   height: 24px;
   width: 100%;
@@ -95,4 +102,6 @@ aside#ads .w250x200, aside#ads .w250, aside#ads .w120 {
 aside#ads .w250x200 {
   height: 200px;
 }
-
+aside#ads div#friends {
+  margin-top: 45px;
+}
