@@ -1,3 +1,7 @@
+/* ========== */
+/* = Layout = */
+/* ========== */
+
 body {
   background: transparent url('../images/bg.jpg') top left no-repeat;
 }
@@ -18,7 +22,31 @@ a#header_link div {
   width: 100%;
   margin: 0 auto;
 }
-
+a#contact_link div {
+  position: absolute;
+  left: 1100px;
+  top: 16px;
+  height: 13px;
+  width: 100px;
+}
+form#search {
+  position: absolute;
+  left: 1355px;
+  top: 10px;
+}
+form#search input.box {
+  background-color: #FFFFFF;
+  border: 0 none;
+  height: 13px;
+  margin-right: 5px;
+  margin-top: 4px;
+  padding: 4px;
+  width: 185px;
+}
+form#search input.submit {
+  display: none;
+  border: 0px;
+}
 
 /* ========================= */
 /* = Features & Categories = */
@@ -31,7 +59,7 @@ aside#features div#about {
 aside#features div#weekly {
   background: transparent url('../images/bg_features.png') no-repeat;
   padding-top: 90px;
-  height: 394px;
+  height: 304px; /* offset for the 90px padding-top */
 }
 aside#features div#weekly div.feature {
   margin-bottom: 10px;
