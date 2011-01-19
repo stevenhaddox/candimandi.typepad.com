@@ -48,6 +48,15 @@ form#search input.submit {
   border: 0px;
 }
 
+
+/* ================ */
+/* = Main Content = */
+/* ================ */
+
+article h3.title {
+  
+}
+
 /* ========================= */
 /* = Features & Categories = */
 /* ========================= */
@@ -61,6 +70,12 @@ aside#features div#about div#about_me {
 }
 aside#features div#about div.item {
   margin-bottom: 15px;
+}
+aside#features div#about div#follow { margin-top: 29px; }
+aside#features div#about div#follow .follow_link {  }
+aside#features div#about div#follow .follow_link div {
+  padding: 3px 0;
+  height: 20px;
 }
 aside#features div#weekly {
   background: transparent url('../images/bg_features.png') no-repeat;

@@ -87,19 +87,19 @@
     </MTBlogIfHasSticky>
 
     <MTEntries no_featured_post="1"><!-- this displays your posts, without any post you've marked as "featured" -->
-    <MTDateHeader><h2 class="date-header"><$MTEntryDate format_weblog_date="1"$></h2></MTDateHeader>
 
     <div class="entry" id="entry-<$MTEntryID$>">
-      <h3 class="entry-header"><a href="<$MTEntryPermalink$>"><$MTEntryTitle$></a></h3><!-- .entry-header -->
-      <div class="entry-body"><$MTEntryBody$></div><!-- .entry-body -->
+      <h3 class="title"><a href="<$MTEntryPermalink$>"><$MTEntryTitle$></a></h3><!-- .title -->
+      <div class="content"><$MTEntryBody$></div><!-- .content -->
       <MTEntryIfExtended><!-- links to your extended entry -->
         <p class="entry-more-link">
           <a href="<$MTEntryPermalink$>#more"><$MTTrans phrase="Continue reading"$> "<$MTEntryTitle$>" &raquo;</a>
         </p>
       </MTEntryIfExtended>
+      <MTDateHeader><p class="date-header"><$MTEntryDate format_weblog_date="1"$></p></MTDateHeader>
       <div class="entry-footer">
-        <p class="info">
-          <$MTTrans phrase="Posted by [_1] at" param="MTEntryAuthorNickname"$> <$MTEntryDate format="%l:%M %p"$>
+        <p class="metadata">
+          <!-- <$MTTrans phrase="Posted by [_1] at" param="MTEntryAuthorNickname"$> <$MTEntryDate format="%l:%M %p"$> -->
           <MTEntryIfCategories><!-- links to the entry's categories -->
             <$MTTrans phrase="in"$> <MTEntryCategories glue=", "><a href="<$MTCategoryArchiveLink$>"><$MTCategoryLabel$></a></MTEntryCategories>
           </MTEntryIfCategories>
@@ -107,7 +107,6 @@
           <MTEntryIfAllowComments><!-- comment count -->
             <span class="separator">|</span><a href="<$MTEntryPermalink$>#comments"><$MTTrans phrase="Comments"$> (<$MTEntryCommentCount$>)</a>
           </MTEntryIfAllowComments>
-
           <MTEntryIfAllowPings><!-- trackback count -->
             <span class="separator">|</span>
             <a href="<$MTEntryPermalink$>#trackback"><$MTTrans phrase="TrackBack"$> (<$MTEntryTrackbackCount$>)</a>
@@ -175,6 +174,14 @@
         <a href="#">
           <img src="../images/label_press.png" alt="in the press">
         </a>
+      </div>
+      <div id="follow" class="span-35 last">
+        <a id="reader" class="follow_link" href="http://fusion.google.com/add?source=atgs&feedurl=http://candimandi.typepad.com/heres_lookin_at_me_kid/atom.xml"><div></div></a>
+        <a id="bloglines" class="follow_link" href="http://www.bloglines.com/sub/http://candimandi.typepad.com"><div></div></a>
+        <a id="blog_lovin" class="follow_link" href="http://www.bloglovin.com/blog/227017/heres-lookin-at-me-kid?claim=umtkcv2wwg4"><div></div></a>
+        <a id="twitter" class="follow_link" href="http://twitter.com/candimandi"><div></div></a>
+        <a id="typepad" class="follow_link" href="http://profile.typepad.com/candimandi"><div></div></a>
+        <a id="flickr" class="follow_link" href="http://www.flickr.com/photos/candimandi/"><div></div></a>
       </div>
     </div>
     
