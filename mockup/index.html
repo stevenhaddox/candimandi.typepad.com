@@ -46,7 +46,10 @@
     <MTBlogIfHasSticky>
     <MTBlogStickyEntry><!-- if you have a featured entry on your blog, it will go here -->
     <div class="entry-featured entry" id="entry-<$MTEntryID$>">
-      <h3 class="entry-header"><a href="<$MTEntryPermalink$>"><$MTEntryTitle$></a></h3>    
+      <img src="../images/title_top.png" alt="separator">
+      <h3 class="entry-header"><a href="<$MTEntryPermalink$>"><$MTEntryTitle$></a></h3>
+      <img src="../images/title_bottom.png" alt="separator">
+
       <div class="entry-body"><$MTEntryBody$></div>
       <MTEntryIfExtended><!-- links to your extended entry -->
         <p class="entry-more-link">
@@ -96,6 +99,7 @@
           <a href="<$MTEntryPermalink$>#more"><$MTTrans phrase="Continue reading"$> "<$MTEntryTitle$>" &raquo;</a>
         </p>
       </MTEntryIfExtended>
+      <img src="../images/date_divider.png" alt="separator">
       <MTDateHeader><p class="date-header"><$MTEntryDate format_weblog_date="1"$></p></MTDateHeader>
       <div class="entry-footer">
         <p class="metadata">

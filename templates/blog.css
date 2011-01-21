@@ -53,8 +53,8 @@ form#search input.submit {
 /* = Main Content = */
 /* ================ */
 
-article h3.title {
-  
+article h3.entry-header, article h3.title {
+  margin-bottom: 8px;
 }
 
 /* ========================= */
