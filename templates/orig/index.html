@@ -1,0 +1,237 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" id="sixapart-standard">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="http://www.typepad.com/" />
+
+<MTBlogIfPrivate>
+	<meta name="robots" content="noindex,nofollow" />
+</MTBlogIfPrivate>
+
+<MTBlogIfCCLicense>
+	<$MTCCLicenseRDF$>
+</MTBlogIfCCLicense>
+
+<$MTBlogMetaKeywords$>
+<$MTBlogMetaDescription$>
+<$MTWeblogMobileLink$>
+
+<link rel="stylesheet" href="<$MTBlogURL$>styles.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="<$MTStaticWebPath$>themes/common/print.css" type="text/css" media="print" />
+
+<MTBlogIfPostsFeed>
+<link rel="alternate" type="application/atom+xml" title="<$MTTrans phrase="Posts on [_1] (Atom)" param="MTBlogName" encode_html="1"$>" href="<$MTBlogURL$>atom.xml" />
+</MTBlogIfPostsFeed>
+
+<title><$MTBlogName$></title>
+
+<link rel="openid.server" href="<$MTOpenID$>" />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="<$MTCGIPath$><$MTRSDScript$>/<$MTBlogID$>" />
+
+<MTUserIfShow field="foaf">
+	<link rel="meta" type="application/rdf+xml" title="FOAF" href="<$MTUserSiteURL$>foaf.rdf" />
+</MTUserIfShow>
+
+</head>
+
+<body class="layout-two-column-right">
+
+<div id="container">
+<div id="container-inner" class="pkg">
+
+<!-- banner -->
+<div id="banner">
+<div id="banner-inner" class="pkg">
+	<h1 id="banner-header"><a href="<$MTBlogURL$>" accesskey="1"><$MTBlogName$></a></h1>
+	<h2 id="banner-description"><MTWeblogIfUsesTheme><$MTBlogDescription$><MTElse><MTWeblogStyleIf field="banner_use_image"><MTElse><$MTBlogDescription$></MTElse></MTWeblogStyleIf></MTElse></MTWeblogIfUsesTheme></h2>
+</div><!-- #banner-inner -->
+</div><!-- #banner -->
+
+<!-- navigation bar is included from a module, so you can edit it once and reuse it across your blog -->
+<$MTInclude module="navigation-bar"$>
+
+<div id="pagebody">
+<div id="pagebody-inner" class="pkg">
+
+<div id="alpha">
+<div id="alpha-inner" class="pkg">
+
+<!-- entries -->
+
+<MTBlogIfHasSticky>
+<MTBlogStickyEntry><!-- if you have a featured entry on your blog, it will go here -->
+<div class="entry-featured entry" id="entry-<$MTEntryID$>">
+
+<h3 class="entry-header">
+	<a href="<$MTEntryPermalink$>"><$MTEntryTitle$></a>
+</h3><!-- .entry-header -->
+
+<div class="entry-content">
+
+<div class="entry-body">
+	<$MTEntryBody$>
+</div><!-- .entry-body -->
+
+<MTEntryIfExtended><!-- links to your extended entry -->
+	<p class="entry-more-link">
+		<a href="<$MTEntryPermalink$>#more"><$MTTrans phrase="Continue reading"$> "<$MTEntryTitle$>" &raquo;</a>
+	</p>
+</MTEntryIfExtended>
+
+</div><!-- .entry-content -->
+
+<div class="entry-footer">
+	<p class="entry-footer-info">
+
+	<$MTTrans phrase="Posted by [_1] at" param="MTEntryAuthorNickname"$> <$MTEntryDate format="%l:%M %p"$>
+	<MTEntryIfCategories><!-- links to the entry's categories -->
+		<$MTTrans phrase="in"$> <MTEntryCategories glue=", "><a href="<$MTCategoryArchiveLink$>"><$MTCategoryLabel$></a></MTEntryCategories>
+	</MTEntryIfCategories>
+
+	<span class="separator">|</span>
+	<a href="<$MTEntryPermalink$>"><$MTTrans phrase="Permalink"$></a>
+
+	<MTEntryIfAllowComments><!-- comment count -->
+		<span class="separator">|</span>
+		<a href="<$MTEntryPermalink$>#comments"><$MTTrans phrase="Comments"$> (<$MTEntryCommentCount$>)</a>
+	</MTEntryIfAllowComments>
+
+	<MTEntryIfAllowPings><!-- trackback count -->
+		<span class="separator">|</span>
+		<a href="<$MTEntryPermalink$>#trackback"><$MTTrans phrase="TrackBack"$> (<$MTEntryTrackbackCount$>)</a>
+	</MTEntryIfAllowPings>
+
+	</p><!-- .entry-footer-info -->
+
+	<MTEntryIfTagged><!-- technorati tags -->
+		<p class="entry-footer-tags">
+			<a href="http://www.<$MTTechnoratiDomain$>/search/<$MTEntryPermalink$>" title="<$MTTrans phrase="Find related items at Technorati."$>"><$MTTrans phrase="Technorati Tags"$></a>:
+			<MTEntryTags glue=", "><a href="http://<$MTTechnoratiDomain$>/tag/<$MTTagLabelClean encode_url="1"$>" rel="tag"><$MTTagLabel$></a></MTEntryTags>
+		</p>
+	</MTEntryIfTagged>
+</div><!-- .entry-footer -->
+
+</div><!-- .entry-featured .entry -->
+</MTBlogStickyEntry>
+</MTBlogIfHasSticky>
+
+<MTEntries no_featured_post="1"><!-- this displays your posts, without any post you've marked as "featured" -->
+
+<MTDateHeader>
+	<h2 class="date-header"><$MTEntryDate format_weblog_date="1"$></h2>
+</MTDateHeader>
+
+<div class="entry" id="entry-<$MTEntryID$>">
+
+<h3 class="entry-header">
+	<a href="<$MTEntryPermalink$>"><$MTEntryTitle$></a>
+</h3><!-- .entry-header -->
+
+<div class="entry-content">
+
+<div class="entry-body">
+	<$MTEntryBody$>
+</div><!-- .entry-body -->
+
+<MTEntryIfExtended><!-- links to your extended entry -->
+	<p class="entry-more-link">
+		<a href="<$MTEntryPermalink$>#more"><$MTTrans phrase="Continue reading"$> "<$MTEntryTitle$>" &raquo;</a>
+	</p>
+</MTEntryIfExtended>
+
+</div><!-- .entry-content -->
+
+<div class="entry-footer">
+	<p class="entry-footer-info">
+
+	<$MTTrans phrase="Posted by [_1] at" param="MTEntryAuthorNickname"$> <$MTEntryDate format="%l:%M %p"$>
+	<MTEntryIfCategories><!-- links to the entry's categories -->
+		<$MTTrans phrase="in"$> <MTEntryCategories glue=", "><a href="<$MTCategoryArchiveLink$>"><$MTCategoryLabel$></a></MTEntryCategories>
+	</MTEntryIfCategories>
+
+	<span class="separator">|</span>
+	<a href="<$MTEntryPermalink$>"><$MTTrans phrase="Permalink"$></a>
+
+	<MTEntryIfAllowComments><!-- comment count -->
+		<span class="separator">|</span>
+		<a href="<$MTEntryPermalink$>#comments"><$MTTrans phrase="Comments"$> (<$MTEntryCommentCount$>)</a>
+	</MTEntryIfAllowComments>
+
+	<MTEntryIfAllowPings><!-- trackback count -->
+		<span class="separator">|</span>
+		<a href="<$MTEntryPermalink$>#trackback"><$MTTrans phrase="TrackBack"$> (<$MTEntryTrackbackCount$>)</a>
+	</MTEntryIfAllowPings>
+
+	</p><!-- .entry-footer-info -->
+
+	<MTEntryIfTagged><!-- technorati tags -->
+		<p class="entry-footer-tags">
+			<a href="http://www.<$MTTechnoratiDomain$>/search/<$MTEntryPermalink$>" title="<$MTTrans phrase="Find related items at Technorati."$>"><$MTTrans phrase="Technorati Tags"$></a>:
+			<MTEntryTags glue=", "><a href="http://<$MTTechnoratiDomain$>/tag/<$MTTagLabelClean encode_url="1"$>" rel="tag"><$MTTagLabel$></a></MTEntryTags>
+		</p>
+	</MTEntryIfTagged>
+</div><!-- .entry-footer -->
+
+</div><!-- .entry -->
+
+<MTEntriesFooter>
+<MTIfPages>
+	<div class="pager-bottom pager-entries pager content-nav">
+	<div class="pager-inner">
+		<MTIfPreviousPage><span class="pager-left">
+			<a href="<$MTPreviousPageURL$>"><span class="chevron">&#171;</span>
+				<span class="pager-label"><$MTEntryPreviousPageLabel encode_html="1"$></span></a>
+		</span></MTIfPreviousPage>
+
+		<MTIfPreviousPage><MTIfNextPage><span class="separator">|</span></MTIfNextPage></MTIfPreviousPage>
+
+		<MTIfNextPage><span class="pager-right">
+			<a href="<$MTNextPageURL$>"><span class="pager-label"><$MTEntryNextPageLabel encode_html="1"$></span>
+				<span class="chevron">&#187;</span></a>
+		</span></MTIfNextPage>
+	</div><!-- .pager-inner -->
+	</div><!-- .pager-bottom .pager-entries .pager .content-nav -->
+</MTIfPages>
+</MTEntriesFooter>
+
+</MTEntries>
+
+</div><!-- #alpha-inner -->
+</div><!-- #alpha -->
+
+<div id="beta">
+<div id="beta-inner" class="pkg">
+
+<!-- include sidebar module content here -->
+
+<$MTInclude module="search"$>
+
+<$MTInclude module="user-photo"$>
+
+<$MTInclude module="about-page"$>
+
+<$MTInclude module="category-cloud"$>
+
+<$MTInclude module="monthly-archives"$>
+
+<$MTInclude module="elsewhere-grid"$>
+
+<$MTInclude module="subscribe-to-feed"$>
+
+<$MTInclude module="powered-by-typepad"$>
+
+</div><!-- #beta-inner -->
+</div><!-- #beta -->
+
+</div><!-- #pagebody-inner -->
+</div><!-- #pagebody -->
+
+</div><!-- #container-inner -->
+</div><!-- #container -->
+
+<$MTStatsScript$>
+
+</body>
+</html>

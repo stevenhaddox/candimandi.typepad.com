@@ -3,7 +3,7 @@
 /* ========== */
 
 body {
-  background: transparent url('../images/bg.jpg') top left no-repeat;
+  background: transparent url('http://candimandi.typepad.com/theme-2011/bg.jpg') top left no-repeat;
 }
 .container {
   margin-left: 440px;
@@ -66,7 +66,7 @@ article h3.entry-header, article h3.title {
 /* ========================= */
 
 aside#features div#about {
-  background: transparent url('../images/bg_about.png') no-repeat;
+  background: transparent url('http://candimandi.typepad.com/theme-2011//bg_about.png') no-repeat;
   height: 540px;
 }
 aside#features div#about div#about_me {
@@ -82,7 +82,7 @@ aside#features div#about div#follow .follow_link div {
   height: 20px;
 }
 aside#features div#weekly {
-  background: transparent url('../images/bg_features.png') no-repeat;
+  background: transparent url('http://candimandi.typepad.com/theme-2011/bg_features.png') no-repeat;
   padding-top: 90px;
   height: 304px; /* offset for the 90px padding-top */
 }
@@ -91,7 +91,7 @@ aside#features div#weekly div.feature {
   text-align: center;
 }
 aside#features div#categories {
-  background: transparent url('../images/bg_categories.png') no-repeat;
+  background: transparent url('http://candimandi.typepad.com/theme-2011/bg_categories.png') no-repeat;
   padding-top: 70px;
   height: 826px;
 }

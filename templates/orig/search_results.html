@@ -1,0 +1,273 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" id="sixapart-standard">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="http://www.typepad.com/" />
+
+<MTBlogIfPrivate>
+	<meta name="robots" content="noindex,nofollow" />
+</MTBlogIfPrivate>
+
+<MTBlogIfCCLicense>
+	<$MTCCLicenseRDF$>
+</MTBlogIfCCLicense>
+
+<$MTBlogMetaKeywords$>
+<$MTBlogMetaDescription$>
+
+<link rel="stylesheet" href="<$MTBlogURL$>styles.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="<$MTStaticWebPath$>themes/common/print.css" type="text/css" media="print" />
+
+<MTBlogIfPostsFeed>
+<link rel="alternate" type="application/atom+xml" title="<$MTTrans phrase="Posts on [_1] (Atom)" param="MTBlogName" encode_html="1"$>" href="<$MTBlogURL$>atom.xml" />
+</MTBlogIfPostsFeed>
+
+<title><$MTBlogName$>: <$MTArchiveTitle$></title>
+
+<link rel="start" href="<$MTBlogURL$>" title="<$MTTrans phrase="Home"$>" />
+
+<MTArchivePrevious><link rel="prev" href="<$MTArchiveLink$>?no_prefetch=1" title="<$MTArchiveTitle encode_html="1"$>" /></MTArchivePrevious>
+<MTArchiveNext><link rel="next" href="<$MTArchiveLink$>?no_prefetch=1" title="<$MTArchiveTitle encode_html="1"$>" /></MTArchiveNext>
+
+</head>
+
+<body class="layout-two-column-right">
+
+<div id="container">
+<div id="container-inner" class="pkg">
+
+<!-- banner -->
+<div id="banner">
+<div id="banner-inner" class="pkg">
+	<h1 id="banner-header"><a href="<$MTBlogURL$>" accesskey="1"><$MTBlogName$></a></h1>
+	<h2 id="banner-description"><MTWeblogIfUsesTheme><$MTBlogDescription$><MTElse><MTWeblogStyleIf field="banner_use_image"><MTElse><$MTBlogDescription$></MTElse></MTWeblogStyleIf></MTElse></MTWeblogIfUsesTheme></h2>
+</div><!-- #banner-inner -->
+</div><!-- #banner -->
+
+<!-- navigation bar is included from a module, so you can edit it once and reuse it across your blog -->
+<$MTInclude module="navigation-bar"$>
+
+<div id="pagebody">
+<div id="pagebody-inner" class="pkg">
+
+<div id="alpha">
+<div id="alpha-inner" class="pkg">
+
+<!-- search result header -->
+<MTNoSearch>
+no search query specified
+<MTElse>
+    <MTNoSearchResults>
+<div class="search-header">
+    <h2 class="content-header"><$MTTrans phrase="No Results Found"$></h2>
+</div>
+<div class="search-subheader">
+    <p><$MTTrans param="MTSearchString" phrase="Sorry, there were no results returned for “[_1]” — please check your spelling, or try something less specific." encode_html="1"$></p>
+</div>
+    <MTElse>
+<div class="search-header">
+    <h2 class="content-header"><$MTTrans param="MTSearchString" phrase="Search Results: “[_1]”" encode_html="1"$></h2>
+</div>
+<div class="search-subheader">
+    <div class="search-sort-by col">
+        <$MTTrans phrase="Sort:"$>
+    <MTSearchResultsIf sort_by="relevance">
+        <$MTTrans phrase="Best Match"$>
+    <MTElse>
+        <a href="<$MTSearchResultsURL sort_by="relevance" encode_html="1"$>"><$MTTrans phrase="Best Match"$></a>
+    </MTElse>
+    </MTSearchResultsIf>
+        |
+    <MTSearchResultsIf sort_by="created_on">
+        <$MTTrans phrase="Most Recent"$>
+    <MTElse>
+        <a href="<$MTSearchResultsURL sort_by="created_on" encode_html="1"$>"><$MTTrans phrase="Most Recent"$></a>
+    </MTElse>
+    </MTSearchResultsIf>
+    </div>
+    <div class="search-feed-subscribe col">
+        <a href="<$MTSearchResultsURL format="atom" encode_html="1"$>"><$MTTrans phrase="Subscribe"$></a>
+    </div>
+    <div class="clr"></div>
+</div>
+    </MTElse>
+    </MTNoSearchResults>
+</MTElse>
+</MTNoSearch>
+
+<!-- search results -->
+<div class="search-results">
+<MTSearchResults>
+    <MTSearchResultsIfAsset type="post">
+
+        <div class="entry" id="entry-<$MTEntryID$>">
+
+        <h3 class="entry-header">
+            <a href="<$MTEntryPermalink$>"><MTSearchResultsHighlight field="title"><$MTEntryTitle$></MTSearchResultsHighlight></a>
+        </h3><!-- .entry-header -->
+
+        <div class="entry-content">
+
+        <div class="entry-body">
+
+        <MTEntryPhoto>
+            <p class="entry-photo">
+                <img src="<$MTGalleryPhotoThumbURL encode_html="1"$>" alt="<$MTGalleryPhotoName encode_html="1"$>" />
+            </p>
+        </MTEntryPhoto>
+
+            <MTSearchResultsHighlight field="content"><$MTEntryBody plaintext="1" trim_to="240"$></MTSearchResultsHighlight>
+
+        <MTEntryAudioAssets>
+            <p class="entry-audio">
+                <a href="<$MTEntryAudioURL encode_html="1"$>" class="inline-player"><$MTEntryAudioName encode_html="1"$></a>
+            </p>
+        </MTEntryAudioAssets>
+
+        </div><!-- .entry-body -->
+
+        </div><!-- .entry-content -->
+
+        <div class="entry-footer">
+            <p class="entry-footer-info">
+
+            <$MTTrans phrase="Posted by [_1] at" param="MTEntryAuthorNickname"$> <$MTEntryDate format="%l:%M %p"$>
+            <MTEntryIfCategories><!-- links to the entry's categories -->
+                <$MTTrans phrase="in"$> <MTEntryCategories glue=", "><a href="<$MTCategoryArchiveLink$>"><$MTCategoryLabel$></a></MTEntryCategories>
+            </MTEntryIfCategories>
+
+            <span class="separator">|</span>
+            <a href="<$MTEntryPermalink$>"><$MTTrans phrase="Permalink"$></a>
+
+            <MTEntryIfAllowComments><!-- comment count -->
+                <span class="separator">|</span>
+                <a href="<$MTEntryPermalink$>#comments"><$MTTrans phrase="Comments"$> (<$MTEntryCommentCount$>)</a>
+            </MTEntryIfAllowComments>
+
+            <MTEntryIfAllowPings><!-- trackback count -->
+                <span class="separator">|</span>
+                <a href="<$MTEntryPermalink$>#trackback"><$MTTrans phrase="TrackBack"$> (<$MTEntryTrackbackCount$>)</a>
+            </MTEntryIfAllowPings>
+
+            </p><!-- .entry-footer-info -->
+
+            <MTEntryIfTagged><!-- technorati tags -->
+                <p class="entry-footer-tags">
+                    <a href="http://www.<$MTTechnoratiDomain$>/search/<$MTEntryPermalink$>" title="<$MTTrans phrase="Find related items at Technorati."$>"><$MTTrans phrase="Technorati Tags"$></a>:
+                    <MTEntryTags glue=", "><a href="http://<$MTTechnoratiDomain$>/tag/<$MTTagLabelClean encode_url="1"$>" rel="tag"><$MTTagLabel$></a></MTEntryTags>
+                </p>
+            </MTEntryIfTagged>
+        </div><!-- .entry-footer -->
+
+        </div><!-- .entry -->
+
+    </MTSearchResultsIfAsset>
+
+    <MTSearchResultsIfAsset type="page">
+
+        <div class="entry" id="entry-<$MTEntryID$>">
+
+        <h3 class="entry-header">
+            <MTSearchResultsHighlight field="title"><$MTPageTitle$></MTSearchResultsHighlight>
+        </h3>
+
+        <div class="entry-content">
+
+        <div class="entry-body">
+            <MTSearchResultsHighlight field="content"><$MTPageBody plaintext="1" trim_to="240" $></MTSearchResultsHighlight>
+        </div><!-- .entry-body -->
+
+        </div><!-- .entry-content -->
+
+        <div class="entry-footer">
+            <p class="entry-footer-info">
+
+            <$MTTrans phrase="Posted by [_1] at" param="MTEntryAuthorNickname"$> <$MTEntryDate format="%X"$>
+
+            </p><!-- .entry-footer-info -->
+        </div><!-- .entry-footer -->
+
+        </div><!-- .entry -->
+
+    </MTSearchResultsIfAsset>
+
+    <MTSearchResultsIfAsset type="comment">
+
+        <div class="comment" id="comment-<$MTCommentID$>">
+            <h3 class="comment-header"><a href="<$MTCommentPermalink$>"><$MTTrans phrase="Comment by"$> <$MTCommentAuthor$><MTCommentEntry><MTIfNonEmpty tag="MTEntryTitle"> <$MTTrans phrase="on"$> “<$MTEntryTitle$>”</MTIfNonEmpty></MTCommentEntry></a></h3>
+            <div class="comment-content-border comment-content">
+                <MTSearchResultsHighlight field="content"><$MTCommentBody plaintext="1" trim_to="100" $></MTSearchResultsHighlight>
+            </div><!-- .comment-content -->
+            <p class="comment-footer">
+                <$MTTrans phrase="Posted by:"$>
+                <$MTCommentAuthorLink show_email="0"$> |
+                <a href="<MTCommentEntry><$MTEntryPermalink$></MTCommentEntry>#comment-<$MTCommentID$>"><$MTCommentDate format_weblog_datetime="1"$></a>
+            </p><!-- .comment-footer -->
+        </div><!-- .comment -->
+
+    </MTSearchResultsIfAsset>
+</MTSearchResults>
+</div>
+<!-- .search-results -->
+
+<MTSearchResultsIfPages>
+<div class="pager-bottom pager-search-results pager content-nav">
+    <div class="pager-inner">
+    <MTSearchResultsIfPreviousPage>
+    <span class="pager-left">
+		<a href="<$MTSearchResultsPreviousPageURL$>"><span class="chevron">&#171;</span> <$MTTrans phrase="Previous"$></a>
+    </span>
+    </MTSearchResultsIfPreviousPage>
+
+    <MTSearchResultsIfPreviousPage><MTSearchResultsIfNextPage>
+    <span class="separator">|</span>
+    </MTSearchResultsIfNextPage></MTSearchResultsIfPreviousPage>
+
+    <MTSearchResultsIfNextPage>
+      <span class="pager-right">
+		<a href="<$MTSearchResultsNextPageURL$>"><$MTTrans phrase="Next"$> <span class="chevron">&#187;</span></a>
+      </span>
+    </MTSearchResultsIfNextPage>
+</div>
+</div>
+</MTSearchResultsIfPages>
+
+</div><!-- #alpha-inner -->
+</div><!-- #alpha -->
+
+<div id="beta">
+<div id="beta-inner" class="pkg">
+
+<!-- include sidebar module content here -->
+
+<$MTInclude module="search"$>
+
+<$MTInclude module="user-photo"$>
+
+<$MTInclude module="about-page"$>
+
+<$MTInclude module="category-cloud"$>
+
+<$MTInclude module="monthly-archives"$>
+
+<$MTInclude module="elsewhere-grid"$>
+
+<$MTInclude module="subscribe-to-feed"$>
+
+<$MTInclude module="powered-by-typepad"$>
+
+</div><!-- #beta-inner -->
+</div><!-- #beta -->
+
+</div><!-- #pagebody-inner -->
+</div><!-- #pagebody -->
+
+</div><!-- #container-inner -->
+</div><!-- #container -->
+
+<$MTStatsScript$>
+
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" id="sixapart-standard">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="http://www.typepad.com/" />
+
+<MTBlogIfPrivate>
+	<meta name="robots" content="noindex,nofollow" />
+</MTBlogIfPrivate>
+
+<MTBlogIfCCLicense>
+	<$MTCCLicenseRDF$>
+</MTBlogIfCCLicense>
+
+<$MTBlogMetaKeywords$>
+<$MTBlogMetaDescription$>
+<$MTWeblogMobileLink$>
+
+<link rel="stylesheet" href="<$MTBlogURL$>styles.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="<$MTStaticWebPath$>themes/common/print.css" type="text/css" media="print" />
+
+<MTBlogIfPostsFeed>
+<link rel="alternate" type="application/atom+xml" title="<$MTTrans phrase="Posts on [_1] (Atom)" param="MTBlogName" encode_html="1"$>" href="<$MTBlogURL$>atom.xml" />
+</MTBlogIfPostsFeed>
+
+<title><$MTBlogName$>: <$MTTrans phrase="Archives"$></title>
+
+<link rel="start" href="<$MTBlogURL$>" title="<$MTTrans phrase="Home"$>" />
+
+</head>
+
+<body class="layout-two-column-right">
+
+<div id="container">
+<div id="container-inner" class="pkg">
+
+<!-- banner -->
+<div id="banner">
+<div id="banner-inner" class="pkg">
+	<h1 id="banner-header"><a href="<$MTBlogURL$>" accesskey="1"><$MTBlogName$></a></h1>
+	<h2 id="banner-description"><MTWeblogIfUsesTheme><$MTBlogDescription$><MTElse><MTWeblogStyleIf field="banner_use_image"><MTElse><$MTBlogDescription$></MTElse></MTWeblogStyleIf></MTElse></MTWeblogIfUsesTheme></h2>
+</div><!-- #banner-inner -->
+</div><!-- #banner -->
+
+<!-- navigation bar is included from a module, so you can edit it once and reuse it across your blog -->
+<$MTInclude module="navigation-bar"$>
+
+<div id="pagebody">
+<div id="pagebody-inner" class="pkg">
+
+<div id="alpha">
+<div id="alpha-inner" class="pkg">
+
+<MTBlogIfArchives archive_type="Monthly">
+<div class="archive-date-based archive">
+
+<h2 class="archive-header"><$MTTrans phrase="Archives"$></h2>
+
+<div class="archive-content">
+
+	<ul class="archive-list">
+	<MTArchiveList archive_type="Monthly">
+		<li class="archive-list-item"><a href="<$MTArchiveLink$>"><$MTArchiveTitle$></a></li>
+	</MTArchiveList>
+	</ul>
+
+</div><!-- .archive-content -->
+</div><!-- .archive-date-based .archive -->
+</MTBlogIfArchives>
+
+<MTBlogIfArchives archive_type="Category">
+<div class="archive-categories archive">
+
+<h2 class="archive-header"><$MTTrans phrase="Categories"$></h2>
+
+<div class="archive-content">
+
+	<ul class="archive-list">
+	<MTCategories>
+		<li class="archive-list-item"><a href="<$MTCategoryArchiveLink$>"><$MTCategoryLabel$></a></li>
+	</MTCategories>
+	</ul>
+
+</div><!-- .archive-content -->
+</div><!-- archive-date-based .archive -->
+</MTBlogIfArchives>
+
+</div><!-- #alpha-inner -->
+</div><!-- #alpha -->
+
+<div id="beta">
+<div id="beta-inner" class="pkg">
+
+<!-- include sidebar module content here -->
+
+<$MTInclude module="search"$>
+
+<$MTInclude module="user-photo"$>
+
+<$MTInclude module="about-page"$>
+
+<$MTInclude module="category-cloud"$>
+
+<$MTInclude module="monthly-archives"$>
+
+<$MTInclude module="elsewhere-grid"$>
+
+<$MTInclude module="subscribe-to-feed"$>
+
+<$MTInclude module="powered-by-typepad"$>
+
+</div><!-- #beta-inner -->
+</div><!-- #beta -->
+
+</div><!-- #pagebody-inner -->
+</div><!-- #pagebody -->
+
+</div><!-- #container-inner -->
+</div><!-- #container -->
+
+<$MTStatsScript$>
+
+</body>
+</html>
