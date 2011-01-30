@@ -2,9 +2,20 @@
 /* = Layout = */
 /* ========== */
 
-body {
-  background: transparent url('http://candimandi.typepad.com/theme-2011/bg.jpg') top left no-repeat;
+/* special sytles for iPhone / similar devices */
+@media screen and (max-device-width: 960px) {
+  body { 
+    background: #FFF url('http://candimandi.typepad.com/theme-2011/bg_iOS.jpg') top left no-repeat !important; 
+  } 
 }
+
+body {
+  background: #FFF url('http://candimandi.typepad.com/theme-2011/bg.jpg') top left no-repeat; /* #F1EBDB */
+  font-family: Georgia, Serif;
+  color: #666;
+  font-size: 10pt;
+}
+
 .container {
   margin-left: 440px;
 }
@@ -57,9 +68,18 @@ article h3.entry-header, article h3.title {
   margin-bottom: 8px;
 }
 
+article h3.entry-header a:link, article h3.entry-header a:visited, article h3.entry-header a:hover, 
+article h3.title a:link, article h3.title a:visited, article h3.title a:hover {
+  color: #666;
+  text-decoration: none;
+}
+
 .date-header {
   margin-bottom: 3em;
 }
+
+article img { max-width: 540px !important; }
+
 
 /* ========================= */
 /* = Features & Categories = */
@@ -93,11 +113,17 @@ aside#features div#weekly div.feature {
 aside#features div#categories {
   background: transparent url('http://candimandi.typepad.com/theme-2011/bg_categories.png') no-repeat;
   padding-top: 70px;
-  height: 826px;
+  height: 750px;
+  margin-bottom: 10px;
 }
 aside#features div#categories div.category {
   margin-bottom: 10px;
   text-align: center;
+}
+aside#features div#rest_of_the_story {
+  background: transparent url('http://candimandi.typepad.com/theme-2011/bg_story.png') no-repeat;
+  padding-top: 80px;
+  height: 340px;
 }
 
 

@@ -1,16 +1,17 @@
-<!-- <$MTInclude module="_header"$> -->
 <!DOCTYPE html> 
 <html lang="en"> 
 <head>
-<!-- <$MTInclude module="_head"$> -->
   <title><$MTBlogName$ /></title>
 
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=1972">
   <meta name="robots" content="noindex,nofollow" />
 
   <link rel="stylesheet" href="../templates/screen.css" type="text/css" media="screen,projection" />
   <link rel="stylesheet" href="../templates/print.css" type="text/css" media="print" />
   <link rel="stylesheet" href="../templates/blog.css" type="text/css" media="screen" />
+  <!-- For mobile browsers -->
+  <link rel="stylesheet" media="handheld" href="css/handheld.css?v=1">
   <link rel="alternate" type="application/atom+xml" title="Posts on [_1] (Atom)" param="MTBlogName" encode_html="1" href="/atom.xml" />
 
   <!--[if lt IE 9]>
@@ -23,8 +24,6 @@
 
 
 </head>
-<!-- // _header -->
-
 
 <body>
 <div class="container">
@@ -55,35 +54,6 @@
           <a href="<$MTEntryPermalink$>#more"><$MTTrans phrase="Continue reading"$> "<$MTEntryTitle$>" &raquo;</a>
         </p>
       </MTEntryIfExtended>
-
-      <div class="entry-footer">
-        <p class="info">
-          <$MTTrans phrase="Posted by [_1] at" param="MTEntryAuthorNickname"$> <$MTEntryDate format="%l:%M %p"$>
-          <MTEntryIfCategories><!-- links to the entry's categories -->
-            <$MTTrans phrase="in"$>
-            <MTEntryCategories glue=", ">
-              <a href="<$MTCategoryArchiveLink$>"><$MTCategoryLabel$></a>
-            </MTEntryCategories>
-          </MTEntryIfCategories>
-          <span class="separator">|</span>
-          <a href="<$MTEntryPermalink$>"><$MTTrans phrase="Permalink"$></a>
-          <MTEntryIfAllowComments><!-- comment count -->
-            <span class="separator">|</span>
-            <a href="<$MTEntryPermalink$>#comments"><$MTTrans phrase="Comments"$> (<$MTEntryCommentCount$>)</a>
-          </MTEntryIfAllowComments>
-          <MTEntryIfAllowPings><!-- trackback count -->
-            <span class="separator">|</span>
-            <a href="<$MTEntryPermalink$>#trackback"><$MTTrans phrase="TrackBack"$> (<$MTEntryTrackbackCount$>)</a>
-          </MTEntryIfAllowPings>
-        </p>
-
-        <MTEntryIfTagged><!-- technorati tags -->
-          <p class="tags">
-            <a href="http://www.<$MTTechnoratiDomain$>/search/<$MTEntryPermalink$>" title="<$MTTrans phrase="Find related items at Technorati."$>"><$MTTrans phrase="Technorati Tags"$></a>:
-            <MTEntryTags glue=", "><a href="http://<$MTTechnoratiDomain$>/tag/<$MTTagLabelClean encode_url="1"$>" rel="tag"><$MTTagLabel$></a></MTEntryTags>
-          </p>
-        </MTEntryIfTagged>
-      </div><!-- .entry-footer -->
     </div><!-- .entry-featured .entry -->
     </MTBlogStickyEntry>
     </MTBlogIfHasSticky>
@@ -91,7 +61,9 @@
     <MTEntries no_featured_post="1"><!-- this displays your posts, without any post you've marked as "featured" -->
 
     <div class="entry" id="entry-<$MTEntryID$>">
-      <h3 class="title"><a href="<$MTEntryPermalink$>"><$MTEntryTitle$></a></h3><!-- .title -->
+      <img src="http://candimandi.typepad.com/theme-2011/title_top.png" alt="separator">
+      <h3 class="entry-header"><a href="<$MTEntryPermalink$>"><$MTEntryTitle$></a></h3>
+      <img src="http://candimandi.typepad.com/theme-2011/title_bottom.png" alt="separator">
       <div class="content"><$MTEntryBody$></div><!-- .content -->
       <MTEntryIfExtended><!-- links to your extended entry -->
         <p class="entry-more-link">
@@ -99,30 +71,7 @@
         </p>
       </MTEntryIfExtended>
       <img src="http://candimandi.typepad.com/theme-2011/date_divider.png" alt="separator">
-      <MTDateHeader><p class="date-header"><$MTEntryDate format_weblog_date="1"$></p></MTDateHeader>
-      <div class="entry-footer">
-        <p class="metadata">
-          <!-- <$MTTrans phrase="Posted by [_1] at" param="MTEntryAuthorNickname"$> <$MTEntryDate format="%l:%M %p"$> -->
-          <MTEntryIfCategories><!-- links to the entry's categories -->
-            <$MTTrans phrase="in"$> <MTEntryCategories glue=", "><a href="<$MTCategoryArchiveLink$>"><$MTCategoryLabel$></a></MTEntryCategories>
-          </MTEntryIfCategories>
-          <span class="separator">|</span><a href="<$MTEntryPermalink$>"><$MTTrans phrase="Permalink"$></a>
-          <MTEntryIfAllowComments><!-- comment count -->
-            <span class="separator">|</span><a href="<$MTEntryPermalink$>#comments"><$MTTrans phrase="Comments"$> (<$MTEntryCommentCount$>)</a>
-          </MTEntryIfAllowComments>
-          <MTEntryIfAllowPings><!-- trackback count -->
-            <span class="separator">|</span>
-            <a href="<$MTEntryPermalink$>#trackback"><$MTTrans phrase="TrackBack"$> (<$MTEntryTrackbackCount$>)</a>
-          </MTEntryIfAllowPings>
-        </p>
-
-        <MTEntryIfTagged><!-- technorati tags -->
-          <p class="tags">
-            <a href="http://www.<$MTTechnoratiDomain$>/search/<$MTEntryPermalink$>" title="<$MTTrans phrase="Find related items at Technorati."$>"><$MTTrans phrase="Technorati Tags"$></a>:
-            <MTEntryTags glue=", "><a href="http://<$MTTechnoratiDomain$>/tag/<$MTTagLabelClean encode_url="1"$>" rel="tag"><$MTTagLabel$></a></MTEntryTags>
-          </p>
-        </MTEntryIfTagged>
-      </div><!-- .entry-footer -->
+      <MTDateHeader><p class="date-header"><$MTEntryDate format="%B %d, %Y"$></p></MTDateHeader>
     </div><!-- .entry -->
 
     <MTEntriesFooter>
@@ -146,19 +95,12 @@
       </div><!-- .pagers -->
     </MTIfPages>
     </MTEntriesFooter>
-  
+
     </MTEntries>
-  
+    <!-- // entries -->
   </article>
 
-  <!-- <$MTInclude module="_features"$> -->
   <aside id="features" class="span-35 append-4">
-  <!--
-    <$MTInclude module="search"$>
-    <$MTInclude module="share"$>
-    <$MTInclude module="monthly-archives"$>
-    <$MTInclude module="category-cloud"$>
-   -->
     <div id="about">
       <div id="about_me" class="item span-35 last">
         <a href="http://profile.typepad.com/candimandi">
@@ -174,7 +116,7 @@
         </a>
       </div>
       <div id="press" class="item span-35 last">
-        <a href="#">
+        <a href="http://candimandi.typepad.com/heres_lookin_at_me_kid/2010/01/in-the-press.html">
           <img src="http://candimandi.typepad.com/theme-2011/label_press.png" alt="in the press">
         </a>
       </div>
@@ -236,12 +178,11 @@
   </aside>
   <!-- // _features -->
 
-  <!-- <$MTInclude module="_ads"$> -->
   <aside id="ads" class="span-50 last">
     <!-- SPONSORS COLUMN -->
     <div id="sponsors" class="span-50 last">
       <h4>
-        <a id="sponsor_info" href="http://candimandi.typepad.com/heres_lookin_at_me_kid/2009/07/sponsorship.html"><div></div></a>
+        <a id="sponsor_info" href="http://candimandi.typepad.com/heres_lookin_at_me_kid/2010/01/sponsorship-information.html"><div></div></a>
       </h4>
     
       <div class="w250x200 span-50 last">
@@ -311,14 +252,10 @@
   </aside>
   <!-- // _ads -->
 
-  <!-- <$MTInclude module="_footer"$> -->
   <footer class="prepend-26 span-108 append-93 last">
     <$MTStatsScript$>
   </footer>
-  <!-- // _footer -->
   
 </div><!-- .container -->
 </body>
 </html>
-
-
