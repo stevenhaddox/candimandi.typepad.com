@@ -60,6 +60,7 @@ form#search input.submit {
 article#pagebody {
   max-height: 2300px;
   overflow: auto;
+  background-color: #FFF;
 }
 
 article h3.entry-header, article h3.title {
