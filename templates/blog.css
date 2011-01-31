@@ -58,8 +58,8 @@ form#search input.submit {
 /* ================ */
 
 article#pagebody {
-/*  height: 2300px;*/
-/*  overflow: auto;*/
+  max-height: 2300px;
+  overflow: auto;
 }
 
 article h3.entry-header, article h3.title {
