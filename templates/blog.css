@@ -58,8 +58,6 @@ form#search input.submit {
 /* ================ */
 
 article#pagebody {
-  max-height: 2300px;
-  overflow: auto;
   background-color: #FFF;
 }
 
@@ -76,6 +74,11 @@ article h3.title a:link, article h3.title a:visited, article h3.title a:hover {
 
 .date-header {
   margin-bottom: 3em;
+}
+
+article#pagebody .container {
+  width: 100%;
+  margin-left: 0;
 }
 
 article img { max-width: 540px !important; }
@@ -164,3 +167,78 @@ aside#ads div#friends {
 }
 
 
+/* =================== */
+/* = Extra Templates = */
+/* =================== */
+
+.search-subheader {
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+
+/* ====================== */
+/* = Scrollbar (jQuery) = */
+/* ====================== */
+
+article#pagebody {
+  height: 2300px;
+}
+article#pagebody .customScrollBox {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+}
+article#pagebody .customScrollBox .container {
+  position: relative;
+  width: 545px;
+  top: 0;
+  float: left;
+}
+article#pagebody .customScrollBox .content {
+  clear: both;
+}
+article#pagebody .dragger_container {
+  position: relative;
+  width: 5px;
+  height: 2295px;
+  float: left;
+  margin: 5px 0 0 5px;
+  background: #CCC; /* 808080 */
+  cursor: pointer -moz-border-radius:2px;
+  -khtml-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 4px;
+  cursor: s-resize;
+}
+article#pagebody .dragger {
+  position: absolute;
+  width: 4px;
+  height: 60px;
+  margin-left: -1px;
+  background: #FAF5EA;
+  text-align: center;
+  line-height: 60px;
+  color: #666;
+  overflow: hidden;
+  cursor: pointer;
+  -moz-border-radius: 4px;
+  -khtml-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+}
+article#pagebody .dragger_pressed {
+  position: absolute;
+  width: 4px;
+  height: 60px;
+  background: #808080;
+  text-align: center;
+  line-height: 60px;
+  color: #666;
+  overflow: hidden;
+  cursor: pointer;
+  -moz-border-radius: 4px;
+  -khtml-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+}
