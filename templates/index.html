@@ -29,32 +29,20 @@
           <a href="<$MTEntryPermalink$>#more"><$MTTrans phrase="Continue reading"$> "<$MTEntryTitle$>" &raquo;</a>
         </p>
       </MTEntryIfExtended>
-      <img src="http://candimandi.typepad.com/theme-2011/date_divider.png" alt="separator">
-      <MTDateHeader><p class="date-header"><$MTEntryDate format="%B %d, %Y"$></p></MTDateHeader>
+      <div class="entry-colophon">
+        <img src="http://candimandi.typepad.com/theme-2011/date_divider.png" alt="separator">
+        <p class="date-header"><$MTEntryDate format="%B %d, %Y"$></p>
+        <MTEntryIfAllowComments>
+          <p class="entry-actions">
+            <a href="<$MTEntryPermalink$>#primary-comment-form">Add Comment</a> | 
+            <a href="<$MTEntryPermalink$>#comments"><$MTEntryCommentCount$> Comments</a>
+          </p>
+        </MTEntryIfAllowComments>
+      </div>
     </div><!-- .entry -->
 
     <MTEntriesFooter>
-    <MTIfPages>
-      <div class="pagers">
-        <MTIfPreviousPage>
-          <span class="left">
-          <a href="<$MTPreviousPageURL$>">
-            <img src="http://candimandi.typepad.com/theme-2011/posts_older.png" alt="previous posts">
-          </a>
-          </span>
-        </MTIfPreviousPage>
-
-        <MTIfPreviousPage><MTIfNextPage><span class="separator">|</span></MTIfNextPage></MTIfPreviousPage>
-
-        <MTIfNextPage>
-          <span class="right">
-          <a href="<$MTNextPageURL$>">
-            <img src="http://candimandi.typepad.com/theme-2011/posts_newer.png" alt="newer posts">
-          </a>
-          </span>
-        </MTIfNextPage>
-      </div><!-- .pagers -->
-    </MTIfPages>
+    <$MTInclude module="_pagers"$>
     </MTEntriesFooter>
   
     </MTEntries>

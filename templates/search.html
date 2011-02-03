@@ -78,37 +78,16 @@ no search query specified
 
         </div><!-- .entry-content -->
 
-        <div class="entry-footer">
-            <img src="http://candimandi.typepad.com/theme-2011/date_divider.png" alt="separator">
-            <p class="entry-footer-info">
-
-            <$MTTrans phrase="Posted by [_1] at" param="MTEntryAuthorNickname"$> <$MTEntryDate format="%l:%M %p"$>
-            <MTEntryIfCategories><!-- links to the entry's categories -->
-                <$MTTrans phrase="in"$> <MTEntryCategories glue=", "><a href="<$MTCategoryArchiveLink$>"><$MTCategoryLabel$></a></MTEntryCategories>
-            </MTEntryIfCategories>
-
-            <span class="separator">|</span>
-            <a href="<$MTEntryPermalink$>"><$MTTrans phrase="Permalink"$></a>
-
-            <MTEntryIfAllowComments><!-- comment count -->
-                <span class="separator">|</span>
-                <a href="<$MTEntryPermalink$>#comments"><$MTTrans phrase="Comments"$> (<$MTEntryCommentCount$>)</a>
-            </MTEntryIfAllowComments>
-
-            <MTEntryIfAllowPings><!-- trackback count -->
-                <span class="separator">|</span>
-                <a href="<$MTEntryPermalink$>#trackback"><$MTTrans phrase="TrackBack"$> (<$MTEntryTrackbackCount$>)</a>
-            </MTEntryIfAllowPings>
-
-            </p><!-- .entry-footer-info -->
-
-            <MTEntryIfTagged><!-- technorati tags -->
-                <p class="entry-footer-tags">
-                    <a href="http://www.<$MTTechnoratiDomain$>/search/<$MTEntryPermalink$>" title="<$MTTrans phrase="Find related items at Technorati."$>"><$MTTrans phrase="Technorati Tags"$></a>:
-                    <MTEntryTags glue=", "><a href="http://<$MTTechnoratiDomain$>/tag/<$MTTagLabelClean encode_url="1"$>" rel="tag"><$MTTagLabel$></a></MTEntryTags>
-                </p>
-            </MTEntryIfTagged>
-        </div><!-- .entry-footer -->
+        <div class="entry-colophon">
+          <img src="http://candimandi.typepad.com/theme-2011/date_divider.png" alt="separator">
+          <p class="date-header"><$MTEntryDate format="%B %d, %Y"$></p>
+          <MTEntryIfAllowComments>
+            <p class="entry-actions">
+              <a href="<$MTEntryPermalink$>#primary-comment-form">Add Comment</a> | 
+              <a href="<$MTEntryPermalink$>#comments"><$MTEntryCommentCount$> Comments</a>
+            </p>
+          </MTEntryIfAllowComments>
+        </div>
 
         </div><!-- .entry -->
 
@@ -132,12 +111,16 @@ no search query specified
 
         </div><!-- .entry-content -->
 
-        <div class="entry-footer">
-            <p class="entry-footer-info">
-            <img src="http://candimandi.typepad.com/theme-2011/date_divider.png" alt="separator">
-            <MTDateHeader><p class="date-header"><$MTEntryDate format="%B %d, %Y"$></p></MTDateHeader>
-            </p><!-- .entry-footer-info -->
-        </div><!-- .entry-footer -->
+        <div class="entry-colophon">
+          <img src="http://candimandi.typepad.com/theme-2011/date_divider.png" alt="separator">
+          <p class="date-header"><$MTEntryDate format="%B %d, %Y"$></p>
+          <MTEntryIfAllowComments>
+            <p class="entry-actions">
+              <a href="<$MTEntryPermalink$>#primary-comment-form">Add Comment</a> | 
+              <a href="<$MTEntryPermalink$>#comments"><$MTEntryCommentCount$> Comments</a>
+            </p>
+          </MTEntryIfAllowComments>
+        </div>
 
         </div><!-- .entry -->
 
@@ -163,25 +146,22 @@ no search query specified
 <!-- .search-results -->
 
 <MTSearchResultsIfPages>
-<div class="pager-bottom pager-search-results pager content-nav">
-    <div class="pager-inner">
-    <MTSearchResultsIfPreviousPage>
-    <span class="pager-left">
-		<a href="<$MTSearchResultsPreviousPageURL$>"><span class="chevron">&#171;</span> <$MTTrans phrase="Previous"$></a>
-    </span>
-    </MTSearchResultsIfPreviousPage>
-
-    <MTSearchResultsIfPreviousPage><MTSearchResultsIfNextPage>
-    <span class="separator">|</span>
-    </MTSearchResultsIfNextPage></MTSearchResultsIfPreviousPage>
-
+  <div class="pagers clear">
     <MTSearchResultsIfNextPage>
-      <span class="pager-right">
-		<a href="<$MTSearchResultsNextPageURL$>"><$MTTrans phrase="Next"$> <span class="chevron">&#187;</span></a>
+      <span class="left">
+      <a href="<$MTSearchResultsNextPageURL$>">
+        <img src="http://candimandi.typepad.com/theme-2011/posts_older.png" alt="previous posts">
+      </a>
       </span>
     </MTSearchResultsIfNextPage>
-</div>
-</div>
+    <MTSearchResultsIfPreviousPage>
+      <span class="right">
+      <a href="<$MTSearchResultsPreviousPageURL$>">
+        <img src="http://candimandi.typepad.com/theme-2011/posts_newer.png" alt="newer posts">
+      </a>
+      </span>
+    </MTSearchResultsIfPreviousPage>
+  </div><!-- .pagers -->
 </MTSearchResultsIfPages>
 
 <$MTInclude module="_footer"$>

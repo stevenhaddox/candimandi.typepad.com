@@ -51,6 +51,10 @@ form#search input.submit {
   display: none;
   border: 0px;
 }
+footer {
+  margin-top: 4px;
+  border-top: 1px solid #CCC;
+}
 
 
 /* ================ */
@@ -72,8 +76,17 @@ article h3.title a:link, article h3.title a:visited, article h3.title a:hover {
   letter-spacing: 2px;
 }
 
-.date-header {
+
+.entry-colophon {
+  width: 100%;
   margin-bottom: 3em;
+  height: 3em; /* 1em for separator img, 1em for date&actions, 1em for extra space w/ both */
+}
+.date-header {
+  float: left;
+}
+.entry-actions {
+  float: right;
 }
 
 article#pagebody .container {
@@ -83,13 +96,15 @@ article#pagebody .container {
 
 article img { max-width: 540px !important; }
 
-article a:link, article a:visited, article a:hover {
+article a:link, article a:visited, article a:hover,
+footer a:link, footer a:visited, footer a:hover {
   color: #E47171;
   text-decoration: none;
 }
-article a:hover {
+article a:hover, footer a:hover {
   text-decoration: underline;
 }
+
 
 /* ========================= */
 /* = Features & Categories = */
@@ -136,6 +151,7 @@ aside#features div#rest_of_the_story {
   background: transparent url('http://candimandi.typepad.com/theme-2011/bg_story.png') no-repeat;
   padding-top: 80px;
   height: 340px;
+  margin-bottom: 20px;
 }
 aside#features div#rest_of_the_story div {
   margin-bottom: 3px;
@@ -157,10 +173,14 @@ aside#ads a#sponsor_info div {
 }
 aside#ads .w250x200, aside#ads .w250, aside#ads .w120 {
   margin-bottom: 10px;
+}
+aside#ads .w250, aside#ads .w120 {
   height: 120px;
+  overflow: hidden;
 }
 aside#ads .w250x200 {
   height: 200px;
+  overflow: hidden;
 }
 aside#ads div#friends {
   margin-top: 45px;
@@ -182,7 +202,7 @@ aside#ads div#friends {
 /* ====================== */
 
 article#pagebody {
-  height: 2300px;
+  height: 2500px;
 }
 article#pagebody .customScrollBox {
   position: relative;
@@ -201,9 +221,9 @@ article#pagebody .customScrollBox .content {
 article#pagebody .dragger_container {
   position: relative;
   width: 5px;
-  height: 2295px;
+  height: 2463px;
   float: left;
-  margin: 5px 0 0 5px;
+  margin: 21px 0 0 5px;
   background: #CCC; /* 808080 */
   cursor: pointer -moz-border-radius:2px;
   -khtml-border-radius: 2px;
@@ -231,7 +251,7 @@ article#pagebody .dragger_pressed {
   position: absolute;
   width: 4px;
   height: 60px;
-  background: #808080;
+  background: #E47171; /* #808080 */
   text-align: center;
   line-height: 60px;
   color: #666;
@@ -241,4 +261,33 @@ article#pagebody .dragger_pressed {
   -khtml-border-radius: 4px;
   -webkit-border-radius: 4px;
   border-radius: 4px;
+}
+
+article#pagebody .scrollUpBtn,article#pagebody .scrollDownBtn {
+  position: absolute;
+  display: inline-block;
+  width: 14px;
+  height: 15px;
+  margin-right: 1px;
+  text-decoration: none;
+  background-color: #E47171 !important; /* #F1EBDB */
+  right: 0;
+  filter: alpha(opacity=40);
+  -moz-opacity: 0.40;
+  -khtml-opacity: 0.40;
+  opacity: 0.40;
+}
+article#pagebody .scrollUpBtn {
+  top: 5px;
+  background: url('http://candimandi.typepad.com/theme-2011/scroll_up.png') center center no-repeat;
+}
+article#pagebody .scrollDownBtn {
+  bottom: 0px;
+  background: url('http://candimandi.typepad.com/theme-2011/scroll_down.png') center center no-repeat;
+}
+article#pagebody .scrollUpBtn:hover, article#pagebody .scrollDownBtn:hover {
+  filter: alpha(opacity=100);
+  -moz-opacity: 1.00;
+  -khtml-opacity: 1.00;
+  opacity: 1.00;
 }

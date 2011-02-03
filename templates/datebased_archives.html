@@ -1,0 +1,44 @@
+<$MTInclude module="_header"$>
+<!-- entries -->
+
+<MTEntries>
+
+<div class="entry" id="entry-<$MTEntryID$>">
+
+<img src="http://candimandi.typepad.com/theme-2011/title_top.png" alt="separator">
+<h3 class="entry-header"><a href="<$MTEntryPermalink$>"><$MTEntryTitle$></a></h3>
+<img src="http://candimandi.typepad.com/theme-2011/title_bottom.png" alt="separator">
+
+<div class="entry-content">
+
+<div class="entry-body">
+	<$MTEntryBody$>
+</div><!-- .entry-body -->
+
+<MTEntryIfExtended><!-- links to your extended entry -->
+	<p class="entry-more-link">
+		<a href="<$MTEntryPermalink$>#more"><$MTTrans phrase="Continue reading"$> "<$MTEntryTitle$>" &raquo;</a>
+	</p>
+</MTEntryIfExtended>
+
+</div><!-- .entry-content -->
+
+<div class="entry-colophon">
+  <img src="http://candimandi.typepad.com/theme-2011/date_divider.png" alt="separator">
+  <p class="date-header"><$MTEntryDate format="%B %d, %Y"$></p>
+  <MTEntryIfAllowComments>
+    <p class="entry-actions">
+      <a href="<$MTEntryPermalink$>#primary-comment-form">Add Comment</a> | 
+      <a href="<$MTEntryPermalink$>#comments"><$MTEntryCommentCount$> Comments</a>
+    </p>
+  </MTEntryIfAllowComments>
+</div>
+
+</div><!-- .entry -->
+
+<MTEntriesFooter>
+  <$MTInclude module="_pagers"$>
+</MTEntriesFooter>
+
+</MTEntries>
+<$MTInclude module="_footer"$>
